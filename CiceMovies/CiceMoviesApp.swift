@@ -11,7 +11,9 @@ import SwiftUI
 struct CiceMoviesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MoviesCoordinator.navigation()
+            //MoviesCoordinator.buildView()
+            
         }
     }
 }
