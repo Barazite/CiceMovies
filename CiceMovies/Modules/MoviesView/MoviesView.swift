@@ -13,10 +13,19 @@ struct MoviesView: View {
     
     var body: some View {
         List{
-            LazyVGrid(columns: Array(repeating: GridItem(), count: 2)){
-                ForEach(self.viewModel.arrayMovies){ item in
-                    PosterCardArtworkView(model: item)
+            Group{
+                if self.viewModel.arrayMovies.isEmpty{
+                    Text("Cargando")
+                }else{
+                    CarrouselPostArtView(modelData: self.viewModel.arrayMovies, title: "Carrusel")
                 }
+            }
+            Group{
+                LazyVGrid(columns: Array(repeating: GridItem(), count: 2)){
+                    ForEach(self.viewModel.arrayMovies){ item in
+                        PosterCardArtworkView(model: item)
+                    }
+                }.padding()
             }
         }
         .onAppear(perform: {
