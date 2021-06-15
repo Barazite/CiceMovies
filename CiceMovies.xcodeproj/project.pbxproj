@@ -30,6 +30,9 @@
 		0974F3C42677D00F00697B89 /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 0974F3C32677D00F00697B89 /* movies.json */; };
 		0974F3C92677D19300697B89 /* PosterCardArtworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0974F3C82677D19300697B89 /* PosterCardArtworkView.swift */; };
 		0974F3CD2677EA4A00697B89 /* CarrouselPostArtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0974F3CC2677EA4A00697B89 /* CarrouselPostArtView.swift */; };
+		0974F3D02678DB0300697B89 /* ApplePodcastsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0974F3CF2678DB0300697B89 /* ApplePodcastsModel.swift */; };
+		0974F3D32678E16E00697B89 /* ApplePodcastsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0974F3D22678E16E00697B89 /* ApplePodcastsViewModel.swift */; };
+		0974F3D62678E5EA00697B89 /* PodcastCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0974F3D52678E5EA00697B89 /* PodcastCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,9 @@
 		0974F3C32677D00F00697B89 /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
 		0974F3C82677D19300697B89 /* PosterCardArtworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCardArtworkView.swift; sourceTree = "<group>"; };
 		0974F3CC2677EA4A00697B89 /* CarrouselPostArtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrouselPostArtView.swift; sourceTree = "<group>"; };
+		0974F3CF2678DB0300697B89 /* ApplePodcastsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePodcastsModel.swift; sourceTree = "<group>"; };
+		0974F3D22678E16E00697B89 /* ApplePodcastsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePodcastsViewModel.swift; sourceTree = "<group>"; };
+		0974F3D52678E5EA00697B89 /* PodcastCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,7 @@
 				0974F387266FE74700697B89 /* HeaderComponent.swift */,
 				0974F3C82677D19300697B89 /* PosterCardArtworkView.swift */,
 				0974F3CC2677EA4A00697B89 /* CarrouselPostArtView.swift */,
+				0974F3D52678E5EA00697B89 /* PodcastCardView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -127,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				0974F3942673DF8800697B89 /* AppleMoviesModel.swift */,
+				0974F3CF2678DB0300697B89 /* ApplePodcastsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -194,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				0974F3BE2677C6C500697B89 /* AppleMoviesViewModel.swift */,
+				0974F3D22678E16E00697B89 /* ApplePodcastsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -287,14 +296,17 @@
 				0974F3C92677D19300697B89 /* PosterCardArtworkView.swift in Sources */,
 				0974F3952673DF8800697B89 /* AppleMoviesModel.swift in Sources */,
 				0974F374266FE16800697B89 /* ContentView.swift in Sources */,
+				0974F3D62678E5EA00697B89 /* PodcastCardView.swift in Sources */,
 				0974F3A12673E1C500697B89 /* RequestManager.swift in Sources */,
 				0974F3AE2673EBCE00697B89 /* MoviesPresenter.swift in Sources */,
 				0974F3A72673E1FF00697B89 /* Utils.swift in Sources */,
+				0974F3D32678E16E00697B89 /* ApplePodcastsViewModel.swift in Sources */,
 				0974F3BA2676891300697B89 /* MenuResources.swift in Sources */,
 				0974F372266FE16800697B89 /* CiceMoviesApp.swift in Sources */,
 				0974F3B72673F41D00697B89 /* MoviesProvider.swift in Sources */,
 				0974F3CD2677EA4A00697B89 /* CarrouselPostArtView.swift in Sources */,
 				0974F3912672A16500697B89 /* DetalleFashionContentView.swift in Sources */,
+				0974F3D02678DB0300697B89 /* ApplePodcastsModel.swift in Sources */,
 				0974F3A42673E1D600697B89 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

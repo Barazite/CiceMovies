@@ -9,6 +9,7 @@ import Foundation
 
 protocol MoviesInteractorInputProtocol: BaseInteractorInputProtocol {
     func fetchDataMoviesInteractor(top: String, all: String, number: String)
+    func fetchDataPodcastsInteractor(top: String, all: String, number: String)
 }
 
 class MoviesInteractorImpl: BaseInteractor{
@@ -18,11 +19,23 @@ class MoviesInteractorImpl: BaseInteractor{
 
 extension MoviesInteractorImpl: MoviesInteractorInputProtocol{
     func fetchDataMoviesInteractor(top: String, all: String, number: String){
-        self.provider.fetchMenu(top: top, all: all, number: number){ [weak self] (resultData) in
+        self.provider.fetchMovies(top: top, all: all, number: number){ [weak self] (resultData) in
             guard self != nil else {return}
             switch resultData{
             case .success(let response):
                 self?.presenter?.dataFromInteractor(data: response.feed?.results ?? [])
+            case .failure(let error):
+                debugPrint(error.localizedDescription)
+            }
+        }
+    }
+    
+    func fetchDataPodcastsInteractor(top: String, all: String, number: String){
+        self.provider.fetchPodcasts(top: top, all: all, number: number){ [weak self] (resultData) in
+            guard self != nil else {return}
+            switch resultData{
+            case .success(let response):
+                self?.presenter?.podcastsFromInteractor(data: response.feed?.results ?? [])
             case .failure(let error):
                 debugPrint(error.localizedDescription)
             }

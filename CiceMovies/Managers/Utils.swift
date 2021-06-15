@@ -69,7 +69,8 @@ struct URLEndpoint {
     
     
     static let baseUrl = "https://rss.itunes.apple.com/api/v1/es/"
-    static let endpointMovies = "movies/%@/%@/%@/explicit.json" // "movies/top-movies/all/25/explicit.json"
+    static let endpointMovies = "movies/%@/%@/%@/explicit.json" //"movies/top-movies/all/25/explicit.json"
+    static let endpointPoscast = "podcasts/%@/%@/%@/explicit.json" //"podcasts/top-podcasts/all/10/explicit.json"
      
 }
 

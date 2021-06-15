@@ -17,7 +17,7 @@ struct MoviesView: View {
                 if self.viewModel.arrayMovies.isEmpty{
                     Text("Cargando")
                 }else{
-                    CarrouselPostArtView(modelData: self.viewModel.arrayMovies, title: "Carrusel")
+                    CarrouselPostArtView(modelData: self.viewModel.arrayPodcasts, title: "Podcasts")
                 }
             }
             Group{
@@ -25,11 +25,11 @@ struct MoviesView: View {
                     ForEach(self.viewModel.arrayMovies){ item in
                         PosterCardArtworkView(model: item)
                     }
-                }.padding()
+                }
             }
         }
         .onAppear(perform: {
-            self.viewModel.fetchDataMovies()
+            self.viewModel.fetchData()
         })
         .navigationTitle("Titulo de navegacion")
     }

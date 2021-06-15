@@ -9,18 +9,21 @@ import Foundation
 
 protocol MoviesInteractorOutputProtocol: BaseInteractorOutputProtocol {
     func dataFromInteractor(data: [ResultMovies])
+    func podcastsFromInteractor(data: [ResultPodcast])
 }
 
 
 class MoviesPresenterImpl: BasePresenter, ObservableObject{
     
     @Published var arrayMovies: [AppleMoviesViewModel] = []
+    @Published var arrayPodcasts: [ApplePodcastsViewModel] = []
     @Published var data = Data()
     
     var interactor: MoviesInteractorInputProtocol? { return super.baseInteractor as? MoviesInteractorInputProtocol}
     
-    func fetchDataMovies(){
+    func fetchData(){
         self.interactor?.fetchDataMoviesInteractor(top: "top-movies", all: "all", number: "\(10)")
+        self.interactor?.fetchDataPodcastsInteractor(top: "top-podcasts", all: "all", number: "\(10)")
     }
     
     func getImageFromUrl(imageUrl: String){
@@ -39,6 +42,11 @@ extension MoviesPresenterImpl: MoviesInteractorOutputProtocol{
     func dataFromInteractor(data: [ResultMovies]) {
         self.arrayMovies.removeAll()
         self.arrayMovies = data.map{ AppleMoviesViewModel(businessModel: $0)}
+    }
+    
+    func podcastsFromInteractor(data: [ResultPodcast]){
+        self.arrayPodcasts.removeAll()
+        self.arrayPodcasts = data.map{ ApplePodcastsViewModel(businessModel: $0)}
     }
     
     

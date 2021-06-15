@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CarrouselPostArtView: View {
     
-    var modelData: [AppleMoviesViewModel] //ResultMovies
+    var modelData: [ApplePodcastsViewModel] //ResultMovies
     var title: String
     
     
@@ -25,7 +25,7 @@ struct CarrouselPostArtView: View {
             ScrollView(.horizontal, showsIndicators: false){
                 HStack(alignment: .top, spacing: 16) {
                     ForEach(self.modelData){ item in
-                        PosterCardArtworkView(model: item)
+                        PodcastCardView(model: item)
                     }
                 }
             }
