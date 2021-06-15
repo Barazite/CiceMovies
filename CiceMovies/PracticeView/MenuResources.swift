@@ -78,6 +78,8 @@ struct PruebaMenu: View{
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.blue, lineWidth: 1)
                     )
+                    
+                    Spacer()
                 }
                 
                 SlideMenu()
