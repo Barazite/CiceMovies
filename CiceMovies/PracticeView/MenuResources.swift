@@ -10,8 +10,8 @@ import SwiftUI
 
 struct MenuResources_Previews: PreviewProvider {
     static var previews: some View {
-        //PruebaMenu()
-        SlideMenu()
+        PruebaMenu()
+        //SlideMenu()
     }
 }
 
@@ -23,7 +23,7 @@ struct PruebaMenu: View{
     var body: some View{
         
         GeometryReader{ geometry in
-            ZStack{
+            ZStack(alignment: .leading){
                 VStack{
                     Picker(selection: $selection, label: Text("Picker")) { //Un picker
                         Text("Opcion 1").tag(1)
@@ -164,8 +164,7 @@ struct SlideMenu: View{
             }
             .padding(.top, 30)
             Spacer()
-        }
-        //.frame(maxWidth: .infinity, maxHeight: .infinity)
+        }.padding(.horizontal)
     }
 }
     
